@@ -22,6 +22,9 @@ class FieldElement:
     # end::source1[]
 
     def __ne__(self, other):
+        if other is None:
+            return False
+        return self.num != other.num and self.prime != other.prime:
         # this should be the inverse of the == operator
         raise NotImplementedError
 
